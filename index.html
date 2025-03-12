@@ -1,7 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madeira Island</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+        <h1>Welcome to Madeira Island</h1>
+        <p>Madeira is a stunning Portuguese island known for its lush landscapes, mountains, and vibrant culture.</p>
+        <div class="tooltip">
+            <img src="https://imgur.com/a/s8k4BXP" alt="Beautiful view of Madeira">
+            <span class="tooltip-text">Scenic view of Madeira Island</span>
+        </div>
+        <h2>Explore Madeira</h2>
+        <p>Discover breathtaking landscapes, traditional cuisine, and warm hospitality.</p>
+        <p>For more information, visit the <a href="https://www.visitmadeira.com/en/" target="_blank" title="Official Madeira Tourism Website">official tourism website</a>.</p>
+    </div>
 </body>
 </html>
