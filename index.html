@@ -2,12 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Scalability for mobile and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madeira Island - A Paradise in Portugal</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .dropdown-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #007BFF;
+            cursor: pointer;
+        }
+
+        .info-box {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <div class="container">
@@ -17,13 +40,11 @@
         </header>
 
         <main id="main-content" role="main">
-            <!-- Image with Tooltip -->
             <div class="tooltip" tabindex="0" role="tooltip" aria-label="Scenic view of Madeira Island">
                 <img src="https://i.imgur.com/BT31tDS.jpg" alt="Aerial view of Madeira Island with ocean and mountains">
                 <span class="tooltip-text">Scenic view of Madeira Island</span>
             </div>
 
-            <!-- Responsive Grid Layout for Sections -->
             <div class="info-container">
                 <section class="info-section">
                     <h2>About Madeira</h2>
@@ -37,26 +58,81 @@
                         <li><strong>Funchal:</strong> The vibrant capital, known for its markets, cable cars, and gardens.</li>
                         <li><strong>Levada Walks:</strong> Unique hiking trails along old irrigation channels.</li>
                         <li><strong>Porto Moniz:</strong> Natural volcanic swimming pools with crystal-clear water.</li>
-                    </ul>
-                </section>
-
-                <section class="info-section">
-                    <h2>Local Cuisine</h2>
-                    <ul>
-                        <li><strong>Espetada:</strong> Skewered beef cooked over an open fire.</li>
-                        <li><strong>Bolo do Caco:</strong> Traditional Madeiran bread with garlic butter.</li>
-                        <li><strong>Poncha:</strong> A famous local drink made with sugarcane rum.</li>
+                        <li><strong>Monte Palace Garden:</strong> A stunning botanical garden with exotic plants.</li>
+                        <li><strong>Cabo Girão:</strong> One of the highest sea cliffs in Europe.</li>
                     </ul>
                 </section>
             </div>
 
-            <p>For more information, visit the <a href="https://www.visitmadeira.com/en/" target="_blank" title="Visit Madeira tourism website">
-                official Madeira tourism website</a>.</p>
+            <section class="interactive-section">
+                <h2>Tell us your favorite attraction in Madeira</h2>
+                <div class="dropdown-container">
+                    <label for="attraction-select">Choose an attraction:</label>
+                    <select id="attraction-select">
+                        <option value="">-- Select an attraction --</option>
+                        <option value="Pico Ruivo">Pico Ruivo - Highest peak on the island</option>
+                        <option value="Funchal">Funchal - Vibrant capital with markets</option>
+                        <option value="Levada Walks">Levada Walks - Scenic hiking trails</option>
+                        <option value="Porto Moniz">Porto Moniz - Natural volcanic pools</option>
+                        <option value="Monte Palace Garden">Monte Palace Garden - Exotic botanical garden</option>
+                        <option value="Cabo Girão">Cabo Girão - Breathtaking sea cliff views</option>
+                    </select>
+                    <div id="attraction-info" class="info-box"></div>
+                </div>
+            </section>
+
+            <p>For more information, visit the <a href="https://www.visitmadeira.com/en/" target="_blank" title="Visit Madeira tourism website">official Madeira tourism website</a>.</p>
         </main>
 
         <footer role="contentinfo">
             <p>&copy; 2025 Madeira Travel Guide</p>
         </footer>
     </div>
+
+    <script>
+        function displayGreeting() {
+            const now = new Date();
+            const hour = now.getHours();
+            let greeting = "Welcome to Madeira Island!";
+
+            if (hour < 12) {
+                greeting = "Good morning! Start your day exploring Madeira!";
+            } else if (hour < 18) {
+                greeting = "Good afternoon! Enjoy the beauty of Madeira!";
+            } else {
+                greeting = "Good evening! Experience Madeira's nightlife!";
+            }
+
+            document.querySelector("header h1").textContent = greeting;
+        }
+
+        function handleAttractionSelection() {
+            const selectElement = document.getElementById("attraction-select");
+            const infoBox = document.getElementById("attraction-info");
+
+            const attractionDetails = {
+                "Pico Ruivo": "The highest peak in Madeira, offering breathtaking views of the island.",
+                "Funchal": "The vibrant capital of Madeira, featuring markets, cable cars, and stunning gardens.",
+                "Levada Walks": "Scenic hiking trails along old irrigation channels, ideal for nature lovers.",
+                "Porto Moniz": "Famous for its natural volcanic swimming pools with crystal-clear water.",
+                "Monte Palace Garden": "A beautiful botanical garden with a vast collection of exotic plants and a Japanese-style garden.",
+                "Cabo Girão": "One of the highest sea cliffs in Europe, offering breathtaking panoramic views."
+            };
+
+            selectElement.addEventListener("change", function () {
+                if (this.value) {
+                    infoBox.textContent = attractionDetails[this.value];
+                    infoBox.style.display = "block";
+                } else {
+                    infoBox.style.display = "none";
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            displayGreeting();
+            handleAttractionSelection();
+        });
+    </script>
 </body>
 </html>
