@@ -15,11 +15,12 @@ body {
     margin: 1rem 0;
 }
 
+/* Make dropdowns more mobile-friendly */
 .dropdown-container select {
-    max-width: 350px; /* Increase the max-width to make the dropdown wider */
-    width: 100%;
-    padding: 5px;
-    font-size: 1rem;
+    max-width: 350px; /* Limit maximum width */
+    width: 100%; /* Ensure they are full width on smaller screens */
+    padding: 10px; /* Add more padding for better touch experience */
+    font-size: 1.2rem; /* Slightly larger font for readability */
     text-align: center;
 }
 
@@ -148,11 +149,13 @@ a:hover {
     background: #007BFF;
     color: white;
 }
+
 /* Default color for all weather icons */
 i.fas {
     font-size: 24px; /* Icon size */
     margin-right: 10px;
 }
+
 /* General heat icon color */
 .temperature-icon.blue {
     color: blue;
@@ -165,6 +168,7 @@ i.fas {
 .temperature-icon.red {
     color: red;
 }
+
 /* General wind icon color */
 .wind-icon.green {
     color: green;
@@ -192,7 +196,11 @@ i.fas {
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 2em; /* Increase header size for readability */
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 
     .info-container {
@@ -202,5 +210,27 @@ i.fas {
     img {
         max-width: 100%; /* Make image responsive */
     }
-    
+
+    /* Make dropdowns full width with more space */
+    .dropdown-container select {
+        font-size: 1.2rem; /* Slightly larger font size */
+        padding: 12px; /* Add padding for better usability */
+        width: 100%; /* Full width on small screens */
+        max-width: none; /* Remove max-width limit */
+    }
+
+    /* Increase space between sections for mobile */
+    .info-container {
+        gap: 25px;
+    }
+
+    /* Center content with better spacing */
+    .info-section {
+        padding: 20px;
+    }
+
+    /* Add more margin to weather box */
+    .info-box {
+        margin-top: 15px;
+    }
 }
