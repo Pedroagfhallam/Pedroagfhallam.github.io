@@ -10,7 +10,16 @@ body {
 
 /* Dropdown styling for weather and attraction selection */
 .dropdown-container {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.dropdown-container select {
+    max-width: 350px; /* Increase the max-width to make the dropdown wider */
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
     text-align: center;
 }
 

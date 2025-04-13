@@ -4,49 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madeira Island - A Paradise in Portugal</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a> <!-- Accessibility for screen readers -->
+<body class="bg-light text-dark">
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
 
-    <div class="container">
-        <header role="banner">
-            <h1>Welcome to Madeira Island</h1>
-            <p>Madeira is a breathtaking Portuguese island known for its lush landscapes, stunning coastline, and rich culture.</p>
+    <div class="container py-4">
+        <header class="text-center mb-4" role="banner">
+            <h1 class="display-5">Welcome to Madeira Island</h1>
+            <p class="lead">Madeira is a breathtaking Portuguese island known for its lush landscapes, stunning coastline, and rich culture.</p>
         </header>
 
         <main id="main-content" role="main">
-            <div class="tooltip" tabindex="0" role="tooltip" aria-label="Scenic view of Madeira Island">
-                <img src="https://i.imgur.com/BT31tDS.jpg" alt="Aerial view of Madeira Island with ocean and mountains">
-                <span class="tooltip-text">Scenic view of Madeira Island</span>
+            <!-- Image with Bootstrap tooltip -->
+            <div class="text-center mb-4">
+                <img src="https://i.imgur.com/BT31tDS.jpg" alt="Aerial view of Madeira Island" class="img-fluid rounded shadow" data-bs-toggle="tooltip" title="Scenic view of Madeira Island">
             </div>
 
-            <div class="info-container">
-                <section class="info-section">
+            <!-- About and Attractions Section -->
+            <div class="row mb-4">
+                <section class="col-md-6">
                     <h2>About Madeira</h2>
                     <p>Located in the Atlantic Ocean, Madeira is an autonomous region of Portugal. Known for its dramatic cliffs, lush greenery, and volcanic origins, the island is a top travel destination.</p>
                 </section>
-
-                <section class="info-section">
+                <section class="col-md-6">
                     <h2>Top Attractions</h2>
-                    <ul>
-                        <li><strong>Pico Ruivo:</strong> The highest peak on the island, offering breathtaking views.</li>
-                        <li><strong>Funchal:</strong> The vibrant capital, known for its markets, cable cars, and gardens.</li>
-                        <li><strong>Levada Walks:</strong> Unique hiking trails along old irrigation channels.</li>
-                        <li><strong>Porto Moniz:</strong> Natural volcanic swimming pools with crystal-clear water.</li>
-                        <li><strong>Monte Palace Garden:</strong> A stunning botanical garden with exotic plants.</li>
-                        <li><strong>Cabo Girão:</strong> One of the highest sea cliffs in Europe.</li>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Pico Ruivo:</strong> The highest peak on the island.</li>
+                        <li class="list-group-item"><strong>Funchal:</strong> The vibrant capital with markets and gardens.</li>
+                        <li class="list-group-item"><strong>Levada Walks:</strong> Trails along old irrigation channels.</li>
+                        <li class="list-group-item"><strong>Porto Moniz:</strong> Volcanic swimming pools.</li>
+                        <li class="list-group-item"><strong>Monte Palace Garden:</strong> Exotic botanical garden.</li>
+                        <li class="list-group-item"><strong>Cabo Girão:</strong> One of Europe’s highest sea cliffs.</li>
                     </ul>
                 </section>
             </div>
 
-            <!-- Interactive Weather and Attraction Section -->
-            <section class="interactive-section">
+            <!-- Weather Section -->
+            <section class="mb-4">
                 <h2>Check the Weather in Madeira</h2>
-                <div class="dropdown-container">
-                    <label for="weather-location">Choose a location:</label>
-                    <select id="weather-location">
+                <div class="mb-3">
+                    <label for="weather-location" class="form-label">Choose a location:</label>
+                    <div class="dropdown-container d-flex justify-content-center my-3">
+                        <select id="weather-location" class="form-select w-auto text-center">
                         <option value="">-- Select a location --</option>
                         <option value="Funchal">Funchal</option>
                         <option value="Machico">Machico</option>
@@ -59,176 +65,140 @@
                         <option value="Porto Moniz">Porto Moniz</option>
                         <option value="Ribeira Brava">Ribeira Brava</option>
                     </select>
-                    <div id="weather-info" class="info-box"></div>
+                    </div>
                 </div>
+                <div id="weather-info" class="alert alert-info d-none"></div>
             </section>
 
-            <section class="interactive-section">
+            <!-- Favorite Attraction Section -->
+            <section class="mb-4">
                 <h2>Tell us your favorite attraction in Madeira</h2>
-                <div class="dropdown-container">
-                    <label for="attraction-select">Choose an attraction:</label>
-                    <select id="attraction-select">
+                <div class="mb-3">
+                    <label for="attraction-select" class="form-label">Choose an attraction:</label>
+                    <div class="dropdown-container d-flex justify-content-center my-3">
+                        <select id="attraction-select" class="form-select w-auto text-center">
                         <option value="">-- Select an attraction --</option>
-                        <option value="Pico Ruivo">Pico Ruivo - Highest peak on the island</option>
-                        <option value="Funchal">Funchal - Vibrant capital with markets</option>
-                        <option value="Levada Walks">Levada Walks - Scenic hiking trails</option>
-                        <option value="Porto Moniz">Porto Moniz - Natural volcanic pools</option>
-                        <option value="Monte Palace Garden">Monte Palace Garden - Exotic botanical garden</option>
-                        <option value="Cabo Girão">Cabo Girão - Breathtaking sea cliff views</option>
+                        <option value="Pico Ruivo">Pico Ruivo</option>
+                        <option value="Funchal">Funchal</option>
+                        <option value="Levada Walks">Levada Walks</option>
+                        <option value="Porto Moniz">Porto Moniz</option>
+                        <option value="Monte Palace Garden">Monte Palace Garden</option>
+                        <option value="Cabo Girão">Cabo Girão</option>
                     </select>
-                    <div id="attraction-info" class="info-box"></div>
+                    </div>
                 </div>
+                <div id="attraction-info" class="alert alert-warning d-none"></div>
             </section>
 
-            <p>For more information, visit the <a href="https://www.visitmadeira.com/en/" target="_blank" title="Visit Madeira tourism website">official Madeira tourism website</a>.</p>
+            <p>Visit the <a href="https://www.visitmadeira.com/en/" target="_blank">official Madeira tourism website</a> for more information.</p>
         </main>
 
-        <footer role="contentinfo">
-            <p>&copy; 2025 Madeira Travel Guide</p>
+        <footer class="text-center mt-5" role="contentinfo">
+            <p class="text-muted">&copy; 2025 Madeira Travel Guide</p>
         </footer>
     </div>
 
-    <script src="scripts.js"></script> <!-- Link to external JS file -->
-</body>
-</html>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-// Function to display a dynamic greeting based on the time of day
-function displayGreeting() {
-    const now = new Date(); // Get the current date and time
-    const hour = now.getHours(); // Extract the current hour (0-23)
-    let greeting = "Welcome to Madeira Island!"; // Default greeting
+    // Enable Bootstrap tooltips
+    $(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
 
-    // Determine the appropriate greeting based on the time of day
-    if (hour < 12) { 
-        greeting = "Good morning! Start your day exploring Madeira!"; // Morning greeting
-    } else if (hour < 18) { 
-        greeting = "Good afternoon! Enjoy the beauty of Madeira!"; // Afternoon greeting
-    } else { 
-        greeting = "Good evening! Experience Madeira's nightlife!"; // Evening greeting
+    // Display greeting based on time
+    function displayGreeting() {
+        const hour = new Date().getHours();
+        let greeting = "Welcome to Madeira Island!";
+        if (hour < 12) greeting = "Good morning! Start your day exploring Madeira!";
+        else if (hour < 18) greeting = "Good afternoon! Enjoy the beauty of Madeira!";
+        else greeting = "Good evening! Experience Madeira's nightlife!";
+        $("header h1").text(greeting);
     }
 
-    // Update the header's <h1> element with the determined greeting
-    document.querySelector("header h1").textContent = greeting;
-}
+    // Handle attraction dropdown
+    function handleAttractionSelection() {
+        const attractionDetails = {
+            "Pico Ruivo": "The highest peak in Madeira, offering breathtaking views.",
+            "Funchal": "The vibrant capital with markets, cable cars, and gardens.",
+            "Levada Walks": "Scenic trails ideal for nature lovers.",
+            "Porto Moniz": "Natural volcanic pools with crystal-clear water.",
+            "Monte Palace Garden": "A botanical garden with exotic plants and koi ponds.",
+            "Cabo Girão": "One of Europe's highest cliffs with panoramic views."
+        };
 
-// Function to handle attraction selection from the dropdown
-function handleAttractionSelection() {
-    const selectElement = document.getElementById("attraction-select"); // Get the dropdown element
-    const infoBox = document.getElementById("attraction-info"); // Get the info display box
+        $("#attraction-select").on("change", function () {
+            const value = $(this).val();
+            if (value) {
+                $("#attraction-info").hide().text(attractionDetails[value]).removeClass("d-none").fadeIn();
+            } else {
+                $("#attraction-info").fadeOut();
+            }
+        });
+    }
 
-    // Object storing descriptions for each attraction
-    const attractionDetails = {
-        "Pico Ruivo": "The highest peak in Madeira, offering breathtaking views of the island.",
-        "Funchal": "The vibrant capital of Madeira, featuring markets, cable cars, and stunning gardens.",
-        "Levada Walks": "Scenic hiking trails along old irrigation channels, ideal for nature lovers.",
-        "Porto Moniz": "Famous for its natural volcanic swimming pools with crystal-clear water.",
-        "Monte Palace Garden": "A beautiful botanical garden with a vast collection of exotic plants and a Japanese-style garden.",
-        "Cabo Girão": "One of the highest sea cliffs in Europe, offering breathtaking panoramic views."
-    };
+    // Handle weather dropdown
+    function handleWeatherSelection() {
+        const coords = {
+            "Funchal": { lat: 32.6669, lon: -16.9241 },
+            "Machico": { lat: 32.7161, lon: -16.7669 },
+            "Santa Cruz": { lat: 32.6833, lon: -16.7833 },
+            "Câmara de Lobos": { lat: 32.6333, lon: -16.9833 },
+            "Santana": { lat: 32.8000, lon: -16.8667 },
+            "São Vicente": { lat: 32.8000, lon: -17.0333 },
+            "Calheta": { lat: 32.7167, lon: -17.1833 },
+            "Ponta do Sol": { lat: 32.6833, lon: -17.1000 },
+            "Porto Moniz": { lat: 32.8667, lon: -17.1667 },
+            "Ribeira Brava": { lat: 32.6833, lon: -17.0667 }
+        };
 
-    // Add an event listener that detects when the user selects an option
-    selectElement.addEventListener("change", function () {
-        if (this.value) { // Check if a valid attraction is selected
-            infoBox.textContent = attractionDetails[this.value]; // Update info box with the selected attraction's details
-            infoBox.style.display = "block"; // Make the info box visible
-        } else {
-            infoBox.style.display = "none"; // Hide the info box if no selection is made
-        }
-    });
-}
+        const descriptions = {
+            0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+            45: "Fog", 48: "Depositing rime fog", 51: "Light drizzle",
+            53: "Moderate drizzle", 55: "Dense drizzle", 61: "Slight rain",
+            63: "Moderate rain", 65: "Heavy rain", 71: "Slight snow",
+            73: "Moderate snow", 75: "Heavy snow", 95: "Thunderstorm"
+        };
 
-// Function to display weather based on the location selected from the dropdown
-function handleWeatherSelection() {
-    const select = document.getElementById("weather-location"); // Get the dropdown element for location
-    const output = document.getElementById("weather-info"); // Get the container where the weather information will be displayed
+        $("#weather-location").on("change", function () {
+            const location = $(this).val();
+            if (coords[location]) {
+                const { lat, lon } = coords[location];
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
 
-    // Coordinates for the "concelhos" (locations) in Madeira
-    const coords = {
-        "Funchal": { lat: 32.6669, lon: -16.9241 },
-        "Machico": { lat: 32.7161, lon: -16.7669 },
-        "Santa Cruz": { lat: 32.6833, lon: -16.7833 },
-        "Câmara de Lobos": { lat: 32.6333, lon: -16.9833 },
-        "Santana": { lat: 32.8000, lon: -16.8667 },
-        "São Vicente": { lat: 32.8000, lon: -17.0333 },
-        "Calheta": { lat: 32.7167, lon: -17.1833 },
-        "Ponta do Sol": { lat: 32.6833, lon: -17.1000 },
-        "Porto Moniz": { lat: 32.8667, lon: -17.1667 },
-        "Ribeira Brava": { lat: 32.6833, lon: -17.0667 }
-    };
+                $.getJSON(url, function (data) {
+                    const weather = data.current_weather;
+                    const desc = descriptions[weather.weathercode] || "Unknown";
 
-    // Descriptions for weather codes returned from the API
-    const descriptions = {
-        0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
-        45: "Fog", 48: "Depositing rime fog", 51: "Light drizzle",
-        53: "Moderate drizzle", 55: "Dense drizzle", 61: "Slight rain",
-        63: "Moderate rain", 65: "Heavy rain", 71: "Slight snow",
-        73: "Moderate snow", 75: "Heavy snow", 95: "Thunderstorm"
-    };
+                    let tempColor = weather.temperature < 15 ? 'text-primary' :
+                                    weather.temperature <= 22 ? 'text-warning' : 'text-danger';
 
-    // Add an event listener that detects when the user selects a location
-    select.addEventListener("change", function () {
-        const location = this.value; // Get the selected location
-        if (coords[location]) { // Check if the selected location exists in the coordinates object
-            const { lat, lon } = coords[location]; // Get the latitude and longitude for the selected location
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`; // Construct the API URL
+                    let windColor = weather.windspeed < 10 ? 'text-success' :
+                                    weather.windspeed <= 30 ? 'text-warning' : 'text-danger';
 
-            // Fetch weather data from the API
-            fetch(url)
-                .then(res => res.json()) // Parse the response as JSON
-                .then(data => {
-                    const weather = data.current_weather; // Extract the current weather data
-                    const desc = descriptions[weather.weathercode] || "Unknown"; // Get description from weather code
-                    
-                    // Dynamically change icon color based on temperature
-                    // Determine the temperature color based on the value
-                    let temperatureColor = '';
-                    
-                    if (weather.temperature < 15) {
-                        temperatureColor = 'blue'; // Temperature below 15°C will be blue
-                    } else if (weather.temperature >= 15 && weather.temperature <= 22) {
-                        temperatureColor = 'orange'; // Temperature between 15°C and 22°C will be orange
-                    } else {
-                        temperatureColor = 'red'; // Temperature above 22°C will be red
-                    }
-                    
-                    let windColor = '';
-                    if (weather.windspeed < 10) {
-                        windColor = 'green'; // Wind speed below 10 km/h will be green (light wind)
-                    } else if (weather.windspeed >= 10 && weather.windspeed <= 30) {
-                        windColor = 'orange'; // Wind speed between 10 km/h and 30 km/h will be orange (moderate wind)
-                    } else {
-                        windColor = 'red'; // Wind speed above 30 km/h will be red (strong wind)
-                    }
-
-                    // Update the output with the correct temperature and wind color classes
-                    output.innerHTML = `
+                    $("#weather-info").hide().html(`
                         <strong>${location}</strong><br>
-                        <i class="fas fa-thermometer-half temperature-icon ${temperatureColor}"></i> ${weather.temperature}°C<br>
-                        <i class="fas fa-wind wind-icon ${windColor}"></i> ${weather.windspeed} km/h<br>
-                        <i class="fas fa-cloud-sun weather-icon"></i> ${desc}
-                    `;
-                    output.style.display = "block"; // Show the weather information
-                })
-                .catch(err => { // Handle errors
-                    console.error(err);
-                    output.textContent = "Error retrieving weather data.";
+                        <i class="fas fa-thermometer-half ${tempColor}"></i> ${weather.temperature}°C<br>
+                        <i class="fas fa-wind ${windColor}"></i> ${weather.windspeed} km/h<br>
+                        <i class="fas fa-cloud-sun"></i> ${desc}
+                    `).removeClass("d-none").fadeIn();
+                }).fail(function () {
+                    $("#weather-info").text("Error retrieving weather data.").removeClass("d-none");
                 });
+            } else {
+                $("#weather-info").fadeOut();
+            }
+        });
+    }
 
-        } else {
-            output.style.display = "none"; // Hide the weather information if no valid location is selected
-        }
+    // Init functions on DOM ready
+    $(document).ready(function () {
+        displayGreeting();
+        handleAttractionSelection();
+        handleWeatherSelection();
     });
-}
-
-// Event listener that runs once the document content is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    displayGreeting(); // Call the function to display the dynamic greeting
-    handleAttractionSelection(); // Call the function to handle attraction selection
-    handleWeatherSelection(); // Call the function to handle weather selection
-});
-
     </script>
-    
 </body>
 </html>
