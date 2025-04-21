@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madeira Island - A Paradise in Portugal</title>
-    
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Your Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-light text-dark">
-    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile -->
+    <title>Madeira Island - A Paradise in Portugal</title> <!-- Title of the page -->
 
-    <div class="container py-4">
-        <header class="text-center mb-4" role="banner">
-            <h1 class="display-5">Welcome to Madeira Island</h1>
-            <p class="lead">Madeira is a breathtaking Portuguese island known for its lush landscapes, stunning coastline, and rich culture.</p>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Include Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome icons -->
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your custom CSS -->
+</head>
+<body class="bg-light text-dark"> <!-- Body with light background and dark text color -->
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a> <!-- Skip link for accessibility -->
+
+    <div class="container py-4"> <!-- Main container with padding -->
+        <header class="text-center mb-4" role="banner"> <!-- Header with centered text and margin at the bottom -->
+            <h1 class="display-5">Welcome to Madeira Island</h1> <!-- Main heading -->
+            <p class="lead">Madeira is a breathtaking Portuguese island known for its lush landscapes, stunning coastline, and rich culture.</p> <!-- Subheading/description -->
         </header>
 
-        <main id="main-content" role="main">
+        <main id="main-content" role="main"> <!-- Main content section -->
             <!-- Image with Bootstrap tooltip -->
-            <div class="text-center mb-4">
-                <img src="https://i.imgur.com/BT31tDS.jpg" alt="Aerial view of Madeira Island" class="img-fluid rounded shadow" data-bs-toggle="tooltip" title="Scenic view of Madeira Island">
+            <div class="text-center mb-4"> <!-- Centered image with margin at the bottom -->
+                <img src="https://i.imgur.com/BT31tDS.jpg" alt="Aerial view of Madeira Island" class="img-fluid rounded shadow" data-bs-toggle="tooltip" title="Scenic view of Madeira Island"> <!-- Image with tooltip on hover -->
             </div>
 
             <!-- About and Attractions Section -->
-            <div class="row mb-4">
-                <section class="col-md-6">
-                    <h2>About Madeira</h2>
-                    <p>Located in the Atlantic Ocean, Madeira is an autonomous region of Portugal. Known for its dramatic cliffs, lush greenery, and volcanic origins, the island is a top travel destination.</p>
+            <div class="row mb-4"> <!-- Row for layout -->
+                <section class="col-md-6"> <!-- Section for About Madeira -->
+                    <h2>About Madeira</h2> <!-- Subheading for About Madeira -->
+                    <p>Located in the Atlantic Ocean, Madeira is an autonomous region of Portugal. Known for its dramatic cliffs, lush greenery, and volcanic origins, the island is a top travel destination.</p> <!-- Paragraph about Madeira -->
                 </section>
-                <section class="col-md-6">
-                    <h2>Top Attractions</h2>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>Pico Ruivo:</strong> The highest peak on the island.</li>
-                        <li class="list-group-item"><strong>Funchal:</strong> The vibrant capital with markets and gardens.</li>
-                        <li class="list-group-item"><strong>Levada Walks:</strong> Trails along old irrigation channels.</li>
-                        <li class="list-group-item"><strong>Porto Moniz:</strong> Volcanic swimming pools.</li>
-                        <li class="list-group-item"><strong>Monte Palace Garden:</strong> Exotic botanical garden.</li>
-                        <li class="list-group-item"><strong>Cabo Girão:</strong> One of Europe’s highest sea cliffs.</li>
+                <section class="col-md-6"> <!-- Section for Top Attractions -->
+                    <h2>Top Attractions</h2> <!-- Subheading for Top Attractions -->
+                    <ul class="list-group"> <!-- Unordered list of attractions -->
+                        <li class="list-group-item"><strong>Pico Ruivo:</strong> The highest peak on the island.</li> <!-- List item for Pico Ruivo -->
+                        <li class="list-group-item"><strong>Funchal:</strong> The vibrant capital with markets and gardens.</li> <!-- List item for Funchal -->
+                        <li class="list-group-item"><strong>Levada Walks:</strong> Trails along old irrigation channels.</li> <!-- List item for Levada Walks -->
+                        <li class="list-group-item"><strong>Porto Moniz:</strong> Volcanic swimming pools.</li> <!-- List item for Porto Moniz -->
+                        <li class="list-group-item"><strong>Monte Palace Garden:</strong> Exotic botanical garden.</li> <!-- List item for Monte Palace Garden -->
+                        <li class="list-group-item"><strong>Cabo Girão:</strong> One of Europe’s highest sea cliffs.</li> <!-- List item for Cabo Girão -->
                     </ul>
                 </section>
             </div>
 
             <!-- Weather Section -->
-            <section class="mb-4">
-                <h2>Check the Weather in Madeira</h2>
-                <div class="mb-3">
-                    <label for="weather-location" class="form-label">Choose a location:</label>
-                    <div class="dropdown-container d-flex justify-content-center my-3">
-                        <select id="weather-location" class="form-select w-auto text-center">
-                        <option value="">-- Select a location --</option>
-                        <option value="Funchal">Funchal</option>
-                        <option value="Machico">Machico</option>
-                        <option value="Santa Cruz">Santa Cruz</option>
-                        <option value="Câmara de Lobos">Câmara de Lobos</option>
-                        <option value="Santana">Santana</option>
-                        <option value="São Vicente">São Vicente</option>
-                        <option value="Calheta">Calheta</option>
-                        <option value="Ponta do Sol">Ponta do Sol</option>
-                        <option value="Porto Moniz">Porto Moniz</option>
-                        <option value="Ribeira Brava">Ribeira Brava</option>
+            <section class="mb-4"> <!-- Section for the Weather feature -->
+                <h2>Check the Weather in Madeira</h2> <!-- Subheading for Weather Section -->
+                <div class="mb-3"> <!-- Margin bottom -->
+                    <label for="weather-location" class="form-label">Choose a location:</label> <!-- Label for the weather location dropdown -->
+                    <div class="dropdown-container d-flex justify-content-center my-3"> <!-- Flexbox for dropdown, center-aligned -->
+                        <select id="weather-location" class="form-select w-auto text-center"> <!-- Dropdown for location selection -->
+                        <option value="">-- Select a location --</option> <!-- Default option -->
+                        <option value="Funchal">Funchal</option> <!-- Option for Funchal -->
+                        <option value="Machico">Machico</option> <!-- Option for Machico -->
+                        <option value="Santa Cruz">Santa Cruz</option> <!-- Option for Santa Cruz -->
+                        <option value="Câmara de Lobos">Câmara de Lobos</option> <!-- Option for Câmara de Lobos -->
+                        <option value="Santana">Santana</option> <!-- Option for Santana -->
+                        <option value="São Vicente">São Vicente</option> <!-- Option for São Vicente -->
+                        <option value="Calheta">Calheta</option> <!-- Option for Calheta -->
+                        <option value="Ponta do Sol">Ponta do Sol</option> <!-- Option for Ponta do Sol -->
+                        <option value="Porto Moniz">Porto Moniz</option> <!-- Option for Porto Moniz -->
+                        <option value="Ribeira Brava">Ribeira Brava</option> <!-- Option for Ribeira Brava -->
                     </select>
                     </div>
                 </div>
-                <div id="weather-info" class="alert alert-info d-none"></div>
+                <div id="weather-info" class="alert alert-info d-none"></div> <!-- Weather info display area -->
             </section>
 
             <!-- Favorite Attraction Section -->
-            <section class="mb-4">
-                <h2>Tell us your favorite attraction in Madeira</h2>
-                <div class="mb-3">
-                    <label for="attraction-select" class="form-label">Choose an attraction:</label>
-                    <div class="dropdown-container d-flex justify-content-center my-3">
-                        <select id="attraction-select" class="form-select w-auto text-center">
-                        <option value="">-- Select an attraction --</option>
-                        <option value="Pico Ruivo">Pico Ruivo</option>
-                        <option value="Funchal">Funchal</option>
-                        <option value="Levada Walks">Levada Walks</option>
-                        <option value="Porto Moniz">Porto Moniz</option>
-                        <option value="Monte Palace Garden">Monte Palace Garden</option>
-                        <option value="Cabo Girão">Cabo Girão</option>
+            <section class="mb-4"> <!-- Section for selecting a favorite attraction -->
+                <h2>Tell us your favorite attraction in Madeira</h2> <!-- Subheading for Favorite Attraction Section -->
+                <div class="mb-3"> <!-- Margin bottom -->
+                    <label for="attraction-select" class="form-label">Choose an attraction:</label> <!-- Label for the attraction dropdown -->
+                    <div class="dropdown-container d-flex justify-content-center my-3"> <!-- Flexbox for dropdown, center-aligned -->
+                        <select id="attraction-select" class="form-select w-auto text-center"> <!-- Dropdown for attraction selection -->
+                        <option value="">-- Select an attraction --</option> <!-- Default option -->
+                        <option value="Pico Ruivo">Pico Ruivo</option> <!-- Option for Pico Ruivo -->
+                        <option value="Funchal">Funchal</option> <!-- Option for Funchal -->
+                        <option value="Levada Walks">Levada Walks</option> <!-- Option for Levada Walks -->
+                        <option value="Porto Moniz">Porto Moniz</option> <!-- Option for Porto Moniz -->
+                        <option value="Monte Palace Garden">Monte Palace Garden</option> <!-- Option for Monte Palace Garden -->
+                        <option value="Cabo Girão">Cabo Girão</option> <!-- Option for Cabo Girão -->
                     </select>
                     </div>
                 </div>
-                <div id="attraction-info" class="alert alert-warning d-none"></div>
+                <div id="attraction-info" class="alert alert-warning d-none"></div> <!-- Attraction info display area -->
             </section>
 
-            <p>Visit the <a href="https://www.visitmadeira.com/en/" target="_blank">official Madeira tourism website</a> for more information.</p>
+            <p>Visit the <a href="https://www.visitmadeira.com/en/" target="_blank">official Madeira tourism website</a> for more information.</p> <!-- Link to official website -->
         </main>
 
-        <footer class="text-center mt-5" role="contentinfo">
-            <p class="text-muted">&copy; 2025 Madeira Travel Guide</p>
+        <footer class="text-center mt-5" role="contentinfo"> <!-- Footer section -->
+            <p class="text-muted">&copy; 2025 Madeira Travel Guide</p> <!-- Copyright notice -->
         </footer>
     </div>
 
     <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS bundle -->
 
     <script>
     // Enable Bootstrap tooltips
     $(function () {
-        $('[data-bs-toggle="tooltip"]').tooltip();
+        $('[data-bs-toggle="tooltip"]').tooltip(); // Initialize tooltips for elements with data-bs-toggle="tooltip"
     });
 
     // Display greeting based on time
     function displayGreeting() {
-        const hour = new Date().getHours();
-        let greeting = "Welcome to Madeira Island!";
-        if (hour < 12) greeting = "Good morning! Start your day exploring Madeira!";
-        else if (hour < 18) greeting = "Good afternoon! Enjoy the beauty of Madeira!";
-        else greeting = "Good evening! Experience Madeira's nightlife!";
-        $("header h1").text(greeting);
+        const hour = new Date().getHours(); // Get current hour
+        let greeting = "Welcome to Madeira Island!"; // Default greeting
+        if (hour < 12) greeting = "Good morning! Start your day exploring Madeira!"; // Morning greeting
+        else if (hour < 18) greeting = "Good afternoon! Enjoy the beauty of Madeira!"; // Afternoon greeting
+        else greeting = "Good evening! Experience Madeira's nightlife!"; // Evening greeting
+        $("header h1").text(greeting); // Update the greeting in the header
     }
 
     // Handle attraction dropdown
     function handleAttractionSelection() {
-        const attractionDetails = {
+        const attractionDetails = { // Details for each attraction
             "Pico Ruivo": "The highest peak in Madeira, offering breathtaking views.",
             "Funchal": "The vibrant capital with markets, cable cars, and gardens.",
             "Levada Walks": "Scenic trails ideal for nature lovers.",
@@ -129,19 +129,19 @@
             "Cabo Girão": "One of Europe's highest cliffs with panoramic views."
         };
 
-        $("#attraction-select").on("change", function () {
-            const value = $(this).val();
+        $("#attraction-select").on("change", function () { // Listen for change in attraction selection
+            const value = $(this).val(); // Get the selected value
             if (value) {
-                $("#attraction-info").hide().text(attractionDetails[value]).removeClass("d-none").fadeIn();
+                $("#attraction-info").hide().text(attractionDetails[value]).removeClass("d-none").fadeIn(); // Display attraction info
             } else {
-                $("#attraction-info").fadeOut();
+                $("#attraction-info").fadeOut(); // Hide attraction info if no selection
             }
         });
     }
 
     // Handle weather dropdown
     function handleWeatherSelection() {
-        const coords = {
+        const coords = { // Coordinates for each location
             "Funchal": { lat: 32.6669, lon: -16.9241 },
             "Machico": { lat: 32.7161, lon: -16.7669 },
             "Santa Cruz": { lat: 32.6833, lon: -16.7833 },
@@ -154,7 +154,7 @@
             "Ribeira Brava": { lat: 32.6833, lon: -17.0667 }
         };
 
-        const descriptions = {
+        const descriptions = { // Weather descriptions based on codes
             0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
             45: "Fog", 48: "Depositing rime fog", 51: "Light drizzle",
             53: "Moderate drizzle", 55: "Dense drizzle", 61: "Slight rain",
@@ -162,42 +162,42 @@
             73: "Moderate snow", 75: "Heavy snow", 95: "Thunderstorm"
         };
 
-        $("#weather-location").on("change", function () {
-            const location = $(this).val();
-            if (coords[location]) {
-                const { lat, lon } = coords[location];
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+        $("#weather-location").on("change", function () { // Listen for change in weather location
+            const location = $(this).val(); // Get the selected location
+            if (coords[location]) { // If location exists in coordinates
+                const { lat, lon } = coords[location]; // Get latitude and longitude
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`; // API URL
 
-                $.getJSON(url, function (data) {
-                    const weather = data.current_weather;
-                    const desc = descriptions[weather.weathercode] || "Unknown";
+                $.getJSON(url, function (data) { // Get weather data from API
+                    const weather = data.current_weather; // Extract weather data
+                    const desc = descriptions[weather.weathercode] || "Unknown"; // Get weather description
 
                     let tempColor = weather.temperature < 15 ? 'text-primary' :
-                                    weather.temperature <= 22 ? 'text-warning' : 'text-danger';
+                                    weather.temperature <= 22 ? 'text-warning' : 'text-danger'; // Determine temperature color
 
                     let windColor = weather.windspeed < 10 ? 'text-success' :
-                                    weather.windspeed <= 30 ? 'text-warning' : 'text-danger';
+                                    weather.windspeed <= 30 ? 'text-warning' : 'text-danger'; // Determine wind speed color
 
-                    $("#weather-info").hide().html(`
+                    $("#weather-info").hide().html(` <!-- Format and display weather data -->
                         <strong>${location}</strong><br>
                         <i class="fas fa-thermometer-half ${tempColor}"></i> ${weather.temperature}°C<br>
                         <i class="fas fa-wind ${windColor}"></i> ${weather.windspeed} km/h<br>
                         <i class="fas fa-cloud-sun"></i> ${desc}
-                    `).removeClass("d-none").fadeIn();
-                }).fail(function () {
-                    $("#weather-info").text("Error retrieving weather data.").removeClass("d-none");
+                    `).removeClass("d-none").fadeIn(); // Show weather info
+                }).fail(function () { // If API call fails
+                    $("#weather-info").text("Error retrieving weather data.").removeClass("d-none"); // Show error message
                 });
             } else {
-                $("#weather-info").fadeOut();
+                $("#weather-info").fadeOut(); // Hide weather info if no location is selected
             }
         });
     }
 
     // Init functions on DOM ready
     $(document).ready(function () {
-        displayGreeting();
-        handleAttractionSelection();
-        handleWeatherSelection();
+        displayGreeting(); // Call the greeting function
+        handleAttractionSelection(); // Handle attraction selection
+        handleWeatherSelection(); // Handle weather selection
     });
     </script>
 </body>
